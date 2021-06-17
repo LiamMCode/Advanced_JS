@@ -106,10 +106,7 @@ var NotesManager = (function(){
 	}
 
 
-	var
-		// private `notes` data
-		notes = [],
-
+	var notes = [], // private `notes` data
 		// DOM refs
 		$notes,
 		$new_note,
