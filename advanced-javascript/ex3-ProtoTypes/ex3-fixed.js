@@ -48,7 +48,6 @@ NotesManager.prototype.handleOpenHelp = function(evt) {
 	if (!this.$help.is(":visible")) {
 		evt.preventDefault();
 		evt.stopPropagation();
-
 		this.showHelp();
 	}
 };
@@ -71,7 +70,6 @@ NotesManager.prototype.handleDocumentClick = function(evt) {
 NotesManager.prototype.handleNoteClick = function(evt) {
 	evt.preventDefault();
 	evt.stopPropagation();
-
 	this.$notes.addClass("active");
 	this.$notes.children(".note").removeClass("highlighted");
 	$(evt.target).addClass("highlighted");
@@ -108,7 +106,6 @@ NotesManager.prototype.init = function(opts) {
 	this.$notes.on("click",".note",this.handleNoteClick.bind(this));
 };
 
-
 var myNotes = new NotesManager();
 
 // assume this data came from the database
@@ -117,7 +114,6 @@ myNotes.loadData([
 	"Now is the time for all good men to come to the aid of their country.",
 	"The quick brown fox jumped over the moon."
 ]);
-
 
 $(document).ready(function(){
 	myNotes.init({
