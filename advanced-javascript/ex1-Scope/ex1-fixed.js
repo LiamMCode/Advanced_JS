@@ -1,35 +1,30 @@
-(function(global){
+(function(){
 
 	function C() {
 		console.log("OOPS!");
 	}
 
-	function E(f) {
+	function E() {
 		console.log("E");
-		f();
-		var f = F;
+		F();
 	}
 
-	var A = function() {
+	function A() {
 		console.log("A");
 		B();
 	};
 
-	var C;
-
 	function G() {
 		console.log("G");
 		H();
-
-		function H() {
-			console.log("H");
-			I();
-		}
 	}
 
-	var D = d;
+	function H() {
+		console.log("H");
+		I();
+	}
 
-	function d() {
+	function D() {
 		console.log("D");
 		E(F);
 	}
@@ -37,15 +32,14 @@
 	function I() {
 		console.log("I");
 		J();
-		J();
 	}
 
-	B = function() {
+	function B() {
 		console.log("B");
 		C();
 	};
 
-	var F = function() {
+	function F() {
 		console.log("F");
 		G();
 	};
@@ -63,12 +57,10 @@
 		})(i);
 	}
 
-	var J = function() {
-		J = function() {
-			console.log("J");
-			fns.K();
-		};
-	};
+	function J() {
+		console.log("J");
+		fns.K();
+	}
 
 	function C() {
 		console.log("C");
